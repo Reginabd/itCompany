@@ -1,15 +1,17 @@
-package details;
+package classes;
+
+import interfaces.Training;
 
 public class TrainingAssistance implements Training{
 
-    private static final double MAXCOEFFICIENT = 0.5;
+    private static final double MAX_COEFFICIENT = 0.5;
     private int trainingCost;
     private double trainingAssistanceCoefficient;
 
-        public TrainingAssistance(int trainingCost, double trainingAssistanceCoefficient) {
-            this.trainingCost = trainingCost;
-            this.trainingAssistanceCoefficient = trainingAssistanceCoefficient;
-        }
+    public TrainingAssistance(int trainingCost, double trainingAssistanceCoefficient) {
+        this.trainingCost = trainingCost;
+        this.trainingAssistanceCoefficient = trainingAssistanceCoefficient;
+    }
 
     @Override
     public String toString() {
@@ -20,11 +22,11 @@ public class TrainingAssistance implements Training{
     }
 
     @Override
-        public double getTrainingAssistance() {
-            if(trainingAssistanceCoefficient < MAXCOEFFICIENT)
+    public double getTrainingAssistance() {
+        if (trainingAssistanceCoefficient < MAX_COEFFICIENT)
             return trainingCost * trainingAssistanceCoefficient;
-        return trainingCost * MAXCOEFFICIENT;
+        return trainingCost * MAX_COEFFICIENT;
     }
-    }
+}
 
 

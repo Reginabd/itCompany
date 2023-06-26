@@ -1,6 +1,8 @@
-package details;
+package classes;
 
-public class TuitionAssistance implements Payment{
+import interfaces.Tuition;
+
+public class TuitionAssistance implements Tuition{
 
     private int employeeTuition;
     private double tuitionAssistanceCoefficient;
@@ -20,6 +22,6 @@ public class TuitionAssistance implements Payment{
 
     @Override
     public double getTuitionAssistance() {
-        return  employeeTuition * tuitionAssistanceCoefficient;
+        return employeeTuition * tuitionAssistanceCoefficient;
     }
 }

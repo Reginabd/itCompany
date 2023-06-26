@@ -1,9 +1,13 @@
-package details;
+package classes;
+
+import interfaces.Salary;
 
 public class SalaryRise implements Salary{
 
     private int baseSalary;
     private double payRiseCoefficient;
+
+    private static final double MIN_WAGES = 11160;
 
     public SalaryRise(int baseSalary, double payRiseCoefficient) {
         this.payRiseCoefficient = payRiseCoefficient;
@@ -22,4 +26,14 @@ public class SalaryRise implements Salary{
     public double getSalaryRise() {
         return baseSalary * payRiseCoefficient;
     }
-}
+
+    //Custom exception
+
+    public static void checkMinWage (double salary) {
+        if (salary < MIN_WAGES);
+        }
+    }
+
+
+
+

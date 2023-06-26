@@ -1,4 +1,4 @@
-package details;
+package interfaces;
 
 public interface Training{
     double getTrainingAssistance();
